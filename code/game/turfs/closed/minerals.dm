@@ -174,6 +174,9 @@
 			gets_drilled(null, triggered_by_explosion = TRUE)
 	return
 
+/turf/closed/mineral/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -10, 5, 1)
+
 /turf/closed/mineral/Spread(turf/T)
 	T.ChangeTurf(type)
 

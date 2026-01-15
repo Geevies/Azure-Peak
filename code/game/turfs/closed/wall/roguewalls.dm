@@ -26,6 +26,9 @@
 		icon = smooth_icon
 	. = ..()
 
+/turf/closed/wall/mineral/rogue/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -10, 5, 1)
+
 
 /turf/closed/wall/mineral/rogue/stone
 	name = "stone wall"
@@ -172,6 +175,9 @@
 	burn_power = 20
 	spread_chance = 4
 
+/turf/closed/wall/mineral/rogue/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
 /turf/closed/wall/mineral/rogue/wood/window
 	name = "wooden window"
 	desc = "A window with a rough-hewn wood frame."
@@ -208,6 +214,9 @@
 	burn_power = 20
 	spread_chance = 9
 
+/turf/closed/wall/mineral/rogue/tent/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
 /turf/closed/wall/mineral/rogue/wooddark
 	name = "dark wood wall"
 	desc = "Made from durable, somewhat darker wood." // i am not sure if the wood is really dark
@@ -225,6 +234,9 @@
 	climbdiff = 3
 	burn_power = 20
 	spread_chance = 4
+
+/turf/closed/wall/mineral/rogue/wooddark/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
 
 /turf/closed/wall/mineral/rogue/wooddark/horizontal
 	icon_state = "horizwooddark"
@@ -258,6 +270,7 @@
 		return 1
 	return ..()
 
+
 /turf/closed/wall/mineral/rogue/roofwall
 	name = "wooden wall"
 	icon = 'icons/turf/roguewall.dmi'
@@ -273,6 +286,9 @@
 	climbdiff = 3
 	burn_power = 20
 	spread_chance = 4
+
+/turf/closed/wall/mineral/rogue/roofwall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
 
 /turf/closed/wall/mineral/rogue/roofwall/center
 	icon_state = "roofTurf_I"
@@ -334,6 +350,9 @@
 /turf/closed/wall/mineral/rogue/decowood/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
+
+/turf/closed/wall/mineral/rogue/decowood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
 
 /turf/closed/wall/mineral/rogue/decowood/vert
 	name = "decorated wooden wall"

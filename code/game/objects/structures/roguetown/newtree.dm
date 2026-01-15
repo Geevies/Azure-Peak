@@ -55,11 +55,11 @@
 						BI.zFall(bio)
 				for(var/obj/structure/flora/newleaf/bil in BI)//2 tile end leaf
 					bil.obj_destruction(damage_flag)
-				BRANCH.obj_flags = CAN_BE_HIT 
+				BRANCH.obj_flags = CAN_BE_HIT
 				BRANCH.obj_destruction(damage_flag)
 			for(var/atom/BRA in B)//unload a sack of rocks on a branch and stand under it, it'll be funny bro
 				B.zFall(BRA)
-	
+
 	for(var/turf/DIA in block(get_step(src, SOUTHWEST), get_step(src, NORTHEAST)))
 		for(var/obj/structure/flora/newleaf/LEAF in DIA)
 			LEAF.obj_destruction(damage_flag)
@@ -191,6 +191,8 @@
 				var/obj/structure/flora/newleaf/corner/T = new(NT)
 				T.dir = D
 
+/obj/structure/flora/newtree/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 0.7)
 
 ///BRANCHES
 

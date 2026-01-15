@@ -591,3 +591,6 @@
 		user.resting = FALSE
 		togglelock(user)
 		T1.visible_message(span_warning("[user] dives into [src]!"))
+
+/obj/structure/closet/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 1)

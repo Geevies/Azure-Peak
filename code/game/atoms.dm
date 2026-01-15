@@ -1259,7 +1259,7 @@
 /atom/proc/get_filter_index(name)
 	return filter_data?.Find(name)
 
-//Automatically turns based on nearby walls, destroys if not valid. 
+//Automatically turns based on nearby walls, destroys if not valid.
 /atom/proc/auto_turn_destructive()
 	var/turf/closed/T = null
 	var/gotdir = 0
@@ -1283,3 +1283,7 @@
 		qdel(src)
 	else
 		src.dir = pick(dir_list) //Random directions are fun :)
+
+///Adds the debris element for projectile impacts
+/atom/proc/add_debris_element()
+	AddElement(/datum/element/debris, null, -15, 8, 0.7)
